@@ -1,8 +1,19 @@
 <?php
 
-namespace Caominhduc3108\Attributes;
+namespace GetThingsDone\Attributes;
+
+use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 
 class Attributes
 {
-    // Build your next great package.
+    public static function exists(string $type): bool
+    {
+        return class_exists($type) 
+            && ( new $type instanceof CastsAttributes );
+    }
+
+    public static function doesntExist(string $type): bool
+    {
+        return !self::exists($type);
+    }
 }

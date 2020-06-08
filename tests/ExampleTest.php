@@ -1,9 +1,9 @@
 <?php
 
-namespace Caominhduc3108\Attributes\Tests;
+namespace GetThingsDone\Attributes\Tests;
 
 use Orchestra\Testbench\TestCase;
-use Caominhduc3108\Attributes\AttributesServiceProvider;
+use GetThingsDone\Attributes\AttributesServiceProvider;
 
 class ExampleTest extends TestCase
 {

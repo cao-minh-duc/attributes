@@ -1,11 +1,11 @@
 {
-    "name": "caominhduc3108/attributes",
+    "name": "get-things-done/attributes",
     "description": "",
     "keywords": [
-        "caominhduc3108",
+        "get-things-done",
         "attributes"
     ],
-    "homepage": "https://github.com/caominhduc3108/attributes",
+    "homepage": "https://github.com/get-things-done/attributes",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -16,21 +16,21 @@
         }
     ],
     "require": {
-        "php": "^7.1",
-        "illuminate/support": "^6.0"
+        "php": "^7.4",
+        "illuminate/support": "^7.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^4.0",
-        "phpunit/phpunit": "^8.0"
+        "orchestra/testbench": "^5.0",
+        "phpunit/phpunit": "^9.0"
     },
     "autoload": {
         "psr-4": {
-            "Caominhduc3108\\Attributes\\": "src"
+            "GetThingsDone\\Attributes\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Caominhduc3108\\Attributes\\Tests\\": "tests"
+            "GetThingsDone\\Attributes\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -44,10 +44,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Caominhduc3108\\Attributes\\AttributesServiceProvider"
+                "GetThingsDone\\Attributes\\AttributesServiceProvider"
             ],
             "aliases": {
-                "Attributes": "Caominhduc3108\\Attributes\\AttributesFacade"
+                "Attributes": "GetThingsDone\\Attributes\\AttributesFacade"
             }
         }
     }

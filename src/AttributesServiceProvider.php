@@ -1,6 +1,6 @@
 <?php
 
-namespace Caominhduc3108\Attributes;
+namespace GetThingsDone\Attributes;
 
 use Illuminate\Support\ServiceProvider;
 

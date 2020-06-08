@@ -1,11 +1,11 @@
 <?php
 
-namespace Caominhduc3108\Attributes;
+namespace GetThingsDone\Attributes;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Caominhduc3108\Attributes\Skeleton\SkeletonClass
+ * @see \GetThingsDone\Attributes\Skeleton\SkeletonClass
  */
 class AttributesFacade extends Facade
 {
