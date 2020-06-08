@@ -1,7 +1,7 @@
 <?php
 namespace GetThingsDone\Attributes\Contracts;
 
-interface HasTypes
+interface HasAttributes
 {
     public function getCasts();
     

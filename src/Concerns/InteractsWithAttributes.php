@@ -3,7 +3,7 @@ namespace GetThingsDone\Attributes\Concerns;
 
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 
-trait InteractsWithTypes
+trait InteractsWithAttributes
 {
     // protected $attributeNames = [];
     
