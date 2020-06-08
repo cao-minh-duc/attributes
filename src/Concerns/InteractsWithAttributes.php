@@ -7,9 +7,9 @@ trait InteractsWithAttributes
 {
     // protected $attributeNames = [];
     
-    public function getAttributeNamesDefault(): array
+    public function getAttributeNamesDefault(array $attributeNames = []): array
     {
-        $attributeNames = [];
+        
         foreach($this->getCasts() as $attribute => $type )
         {
             if( class_exists($type) 

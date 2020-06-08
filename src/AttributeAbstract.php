@@ -40,7 +40,7 @@ abstract class AttributeAbstract implements CastsAttributes
 
     public function getDefaultName()
     {
-        return trans( 'types:name' )[ $this->getAlias() ] ?? class_basename( static::class );
+        return trans( 'attributes::name' )[ $this->getAlias() ] ?? class_basename( static::class );
     }
 
     public function getDefaultRules(): array
