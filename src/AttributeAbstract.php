@@ -1,10 +1,13 @@
 <?php
 namespace GetThingsDone\Attributes;
 
+use Illuminate\Support\Str;
+use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 
 abstract class AttributeAbstract implements CastsAttributes
 {
+    protected ?string $alias;
     /**
      * Cast the given value.
      *
@@ -33,10 +36,7 @@ abstract class AttributeAbstract implements CastsAttributes
         return $value;
     }
 
-    public function getAlias()
-    {
-        return strtolower( class_basename( static::class ) );
-    }
+    abstract function createColumn(Blueprint $table);
 
     public function getDefaultName()
     {
@@ -46,5 +46,30 @@ abstract class AttributeAbstract implements CastsAttributes
     public function getDefaultRules(): array
     {
         return [];
+    }
+
+    /**
+     * Get the value of alias
+     */ 
+    public function getAlias(): string
+    {
+        return $this->alias ?? $this->getDefaultAlias();
+    }
+
+    /**
+     * Set the value of alias
+     *
+     * @return  self
+     */ 
+    public function setAlias($alias)
+    {
+        $this->alias = $alias;
+
+        return $this;
+    }
+
+    public function getDefaultAlias()
+    {
+        return Str::snake( class_basename( static::class ) );
     }
 }

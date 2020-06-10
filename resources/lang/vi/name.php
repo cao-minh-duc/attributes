@@ -7,6 +7,7 @@ return [
     'action' => 'Thao tác',
     'email' => 'Email',
     'address' => 'Địa chỉ',
-    'description' => 'Ghi chú'
+    'description' => 'Ghi chú',
+    'price' => 'Giá'
 
 ];

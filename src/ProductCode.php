@@ -3,7 +3,7 @@ namespace GetThingsDone\Attributes;
 
 use Illuminate\Database\Schema\Blueprint;
 
-class Code extends AttributeAbstract
+class ProductCode extends Code
 {
     public function createColumn(Blueprint $table): Blueprint
     {

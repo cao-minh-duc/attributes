@@ -7,20 +7,14 @@ trait InteractsWithRules
 {
     protected array $rules = [];
 
-    public function getDefaultRules(): array
+    public function getDefaultRules(array $rules = []): array
     {
-        $rules = [];
-        foreach($this->getCasts() as $attribute => $type)
-        {
-            if( Attributes::doesntExist($type))
-            {
-                continue;
-            }
-
-            $rules[$attribute] = (new $type)->getDefaultRules();
-        }
-
-        return $rules;
+        return array_merge(
+            $this->getAttributeInstances()->map(function ($attribute){
+                return $attribute->getDefaultRules();
+            })->toArray(),
+            $rules
+        );
     }
 
     public function getRules(): array
