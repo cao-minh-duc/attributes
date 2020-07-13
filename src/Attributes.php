@@ -6,14 +6,14 @@ use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 
 class Attributes
 {
-    public static function exists(string $type): bool
+    public static function exists(string $attribute): bool
     {
-        return class_exists($type) 
-            && ( new $type instanceof CastsAttributes );
+        return class_exists($attribute) 
+            && ( new $attribute instanceof CastsAttributes );
     }
 
-    public static function doesntExist(string $type): bool
+    public static function doesntExist(string $attribute): bool
     {
-        return !self::exists($type);
+        return !self::exists($attribute);
     }
 }
