@@ -1,11 +1,10 @@
 <?php
-namespace GetThingsDone\Attributes\Tests\Support;
+namespace GetThingsDone\Attributes\Tests\Builders;
 
-use Doctrine\DBAL\Types\TextType;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use GetThingsDone\Attributes\Tests\TestCase;
-use GetThingsDone\Attributes\Support\SchemaBuilder;
+use GetThingsDone\Attributes\Builders\SchemaBuilder;
 use GetThingsDone\Attributes\Tests\Stubs\TestModel;
 
 class SchemaBuilderTest extends TestCase

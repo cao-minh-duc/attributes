@@ -8,7 +8,6 @@ class Price extends AttributeAbstract
     public function getDefaultRules(): array
     {
         return [
-            'required',
             'numeric',
             'min:0'
         ];

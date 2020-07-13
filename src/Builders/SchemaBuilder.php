@@ -1,24 +1,14 @@
 <?php
-namespace GetThingsDone\Attributes\Support;
+namespace GetThingsDone\Attributes\Builders;
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
+use GetThingsDone\Attributes\Builders\BuilderAbstract;
 use GetThingsDone\Attributes\Contracts\HasCastAttributes;
 use GetThingsDone\Attributes\Attributes\AttributeAbstract;
 
-class SchemaBuilder 
+class SchemaBuilder extends BuilderAbstract
 {
-    protected HasCastAttributes $model;
-
-    public function __construct(HasCastAttributes $model)
-    {
-        $this->model = $model;
-    }
-
-    public static function make(HasCastAttributes $model)
-    {
-        return new self($model);
-    }
 
     public function createTable(): void
     {
