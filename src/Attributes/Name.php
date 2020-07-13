@@ -1,23 +1,22 @@
 <?php
-namespace GetThingsDone\Attributes;
+namespace GetThingsDone\Attributes\Attributes;
 
 use Illuminate\Database\Schema\Blueprint;
 
-class Phone extends AttributeAbstract
+class Name extends AttributeAbstract
 {
     public function getDefaultRules(): array
     {
         return [
             'required',
             'string',
-            'alpha_num',
-            'max:20'
+            'max:255'
         ];
     }
 
     public function createColumn(Blueprint $table): Blueprint
     {
-        $table->string($this->alias,20);
+        $table->string($this->alias);
         return $table;
     }
 }

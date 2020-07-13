@@ -5,10 +5,8 @@ use Illuminate\Support\Collection;
 use GetThingsDone\Attributes\Attributes;
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 
-trait InteractsWithAttributes
-{
-    // protected $attributeNames = [];
-    
+trait InteractsWithCastAttributes
+{   
     public function getAttributeNamesDefault(array $attributeNames = []): array
     {
         return array_merge(

@@ -1,13 +1,13 @@
 <?php
-namespace GetThingsDone\Attributes;
+namespace GetThingsDone\Attributes\Attributes;
 
 use Illuminate\Database\Schema\Blueprint;
 
-class ProductCode extends Code
+class Description extends AttributeAbstract
 {
     public function createColumn(Blueprint $table): Blueprint
     {
-        $table->string( $this->alias, 10 );
+        $table->text($this->alias)->nullable();
         return $table;
     }
 }

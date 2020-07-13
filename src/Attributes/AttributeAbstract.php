@@ -1,5 +1,5 @@
 <?php
-namespace GetThingsDone\Attributes;
+namespace GetThingsDone\Attributes\Attributes;
 
 use Illuminate\Support\Str;
 use Illuminate\Database\Schema\Blueprint;

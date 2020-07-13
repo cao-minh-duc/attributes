@@ -1,22 +1,23 @@
 <?php
-namespace GetThingsDone\Attributes;
+namespace GetThingsDone\Attributes\Attributes;
 
 use Illuminate\Database\Schema\Blueprint;
 
-class Price extends AttributeAbstract
+class Phone extends AttributeAbstract
 {
     public function getDefaultRules(): array
     {
         return [
             'required',
-            'numeric',
-            'min:0'
+            'string',
+            'alpha_num',
+            'max:20'
         ];
     }
 
     public function createColumn(Blueprint $table): Blueprint
     {
-        $table->unsignedBigInteger($this->alias)->default(0);
+        $table->string($this->alias,20);
         return $table;
     }
 }

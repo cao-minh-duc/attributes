@@ -2,20 +2,14 @@
 
 namespace GetThingsDone\Attributes\Tests;
 
-use Orchestra\Testbench\TestCase;
+use Orchestra\Testbench\TestCase as BaseTestCase;
 use GetThingsDone\Attributes\AttributesServiceProvider;
 
-class ExampleTest extends TestCase
+class TestCase extends BaseTestCase
 {
 
     protected function getPackageProviders($app)
     {
         return [AttributesServiceProvider::class];
-    }
-    
-    /** @test */
-    public function true_is_true()
-    {
-        $this->assertTrue(true);
     }
 }
