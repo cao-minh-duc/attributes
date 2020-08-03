@@ -8,6 +8,7 @@ return [
     'email' => 'Email',
     'address' => 'Địa chỉ',
     'description' => 'Ghi chú',
-    'price' => 'Giá'
+    'price' => 'Giá',
+    'size' => 'Kích thước'
 
 ];

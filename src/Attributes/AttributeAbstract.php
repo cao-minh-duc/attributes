@@ -36,7 +36,7 @@ abstract class AttributeAbstract implements CastsAttributes
         return $value;
     }
 
-    abstract function createColumn(Blueprint $table);
+    abstract public function createColumn(Blueprint $table);
 
     public function getDefaultName()
     {

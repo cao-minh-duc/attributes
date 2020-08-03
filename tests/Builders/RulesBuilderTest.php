@@ -10,6 +10,17 @@ class RulesBuilderTest extends TestCase
     protected array $expectRules = [
         'email' => [
             'email:rfc,dns'
+        ],
+        'code' => [
+            'required',
+            'string',
+            'alpha_num',
+            'max:20'
+        ],
+        'name' => [
+            'required',
+            'string',
+            'max:255'
         ]
     ];
 

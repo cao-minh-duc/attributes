@@ -11,11 +11,27 @@ class SchemaBuilderTest extends TestCase
 {
     protected $expectColumns = [
         [
+            'name' => 'code',
+            'type' => 'string',
+            'notnull' => true,
+        ],
+        [
+            'name' => 'name',
+            'type' => 'string',
+            'notnull' => true,
+        ],
+        [
             'name' => 'address',
             'type' => 'text',
             'notnull' => true,
+        ],
+        [
+            'name' => 'email',
+            'type' => 'string',
+            'notnull' => true,
         ]
     ];
+    
     /** @test */
     public function it_should_create_table_columns()
     {
