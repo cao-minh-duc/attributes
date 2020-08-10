@@ -25,5 +25,5 @@ interface HasCastAttributes
      *
      * @throws \Illuminate\Database\Eloquent\MassAssignmentException
      */
-    public function fill();
+    public function fill(array $attributes);
 }
