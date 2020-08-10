@@ -14,4 +14,8 @@ interface HasCastAttributes
     public function getTable();
 
     public function getAttributeInstances();
+
+    public function toArray();
+
+    public function fill();
 }
