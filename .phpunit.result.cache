@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":253:{a:2:{s:7:"defects";a:0:{}s:5:"times";a:2:{s:88:"GetThingsDone\Attributes\Tests\Builders\RulesBuilderTest::it_should_return_default_rules";d:0.124;s:89:"GetThingsDone\Attributes\Tests\Builders\SchemaBuilderTest::it_should_create_table_columns";d:0.104;}}}
